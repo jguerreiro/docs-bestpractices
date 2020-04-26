@@ -49,11 +49,11 @@ This article aggregates a collection of best practices and conventions that migh
 
 ## Database
 
-* 492 attributes in one Entity is perhaps too much :)
-* Attribute with size 4000 is perhaps too much :)
+* 492 attributes (columns) in one Entity is perhaps too much :)
+* Attribute with a size of 4000 bytes is perhaps too much :)
 * Check the Delete Rule of Foreign Keys to an Entity.
-* Remember to set the Is Mandatory property
-* Add descriptions at least to the Entities
+* Remember to set the "Is Mandatory" property
+* At the very least, add descriptions to the Entities
 
 ## Aggregates and Advanced Queries
 
@@ -103,7 +103,8 @@ Also:
 * Wrap Extensions in eSpaces
 * Avoid circular references between eSpaces
 * Clearly define the responsibilities of each eSpace
-* Remove unused references Encapsulate business logic in User Actions
+* Remove unused references 
+* Encapsulate business logic in User Actions
 * Create user story driven interfaces Don't isolate the data model in one eSpace. eSpaces should be functional units instead of architectural units.
 * Use asynchronous logic when possible
 
@@ -122,11 +123,11 @@ Also:
 ## Logic and Development
 
 * Remove unused or duplicate code
-* An eSpace with a size > 4 MiB normally means bad architecture
+* An eSpace with a size > 4 MB normally means bad architecture
 * Set at least one default button in your Web Screens
 * Avoid changing Site Properties values in your logic
 * Be careful about infinite recursion
-* Hide warnings only for a good reason
+* Hide warnings only for a good reason. Suggestion: write these to a log file.
 * More than 20 site properties in one eSpace normally means bad design
 * Avoid using Extensions solely for Web Service consumption
 * Disable auditing of Extensions in Production
@@ -142,8 +143,6 @@ Also:
 * Validate user’s Roles before executing Screen Actions
 * Use encrypted passwords in the database
 * Use Internal Access Only for Web Flows and Web Services 
-
-## Performance
 
 ### Data model
 
